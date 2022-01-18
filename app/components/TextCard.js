@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     fontFamily: 'NotoKufiArabic-Regular',
     fontSize: 16,
     color: '#011132',
-    marginRight: 10,
+    // marginRight: 10,
     marginBottom: 10,
   },
   txt: {

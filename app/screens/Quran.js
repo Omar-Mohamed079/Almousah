@@ -1,15 +1,37 @@
 import React from 'react';
-import { View,StyleSheet, Text } from 'react-native';
+import { View,StyleSheet, Text, ImageBackground } from 'react-native';
+import Header from '../components/Header';
+import SearchBar from '../components/SearchBar';
+import RowQuran from "../components/RowQuran"
 
 function Quran(props) {
  return (
-<View style={styles.container}> 
-<Text>Quraan</Text>
-</View>
-   );
+   <View style={styles.container}>
+     <Header />
+     <SearchBar />
+     <Text style={styles.Header}>القرآن الكريم </Text>
+     <RowQuran name="اسم السورة" />
+     <RowQuran name="اسم السورة" />
+     <RowQuran name="اسم السورة" />
+     <RowQuran name="اسم السورة" />
+     <RowQuran name="اسم السورة" />
+     <RowQuran name="اسم السورة" />
+   </View>
+ );
 }
 const styles = StyleSheet.create({
-container:{
-}
-})
+  Header: {
+    color: "black",
+    fontFamily: 'NotoKufiArabic-Regular',
+    fontSize: 16,
+    marginBottom: 10,
+    marginVertical: 15,
+  },
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+  },
+  
+});
 export default Quran;

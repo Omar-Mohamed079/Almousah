@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 // import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import AppNavigator from './AppNavigator';
@@ -6,11 +6,12 @@ import Quran from '../screens/Quran';
 import Bokhary from '../screens/Bokhary';
 import OtherSciences from '../screens/OtherSciences';
 import Books from '../screens/Books';
-import {Image, Text} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import SplashScreen from '../screens/SplashScreen';
+import DrawerNavigator from './DrawerNavigator';
 const Tab = createBottomTabNavigator();
-
+  // const tabOffsetValue = useRef(initialValue);
 const BottomTabs = () => (
   <Tab.Navigator
     initialRouteName="Home"
@@ -25,6 +26,10 @@ const BottomTabs = () => (
       name="Books"
       component={Books}
       options={{
+        tabBarLabelStyle: {
+          color: '#535353',
+          fontFamily: 'NotoKufiArabic-Regular',
+        },
         headerShown: false,
         tabBarActiveTintColor: '#535353',
         tabBarLabel: 'الكتب',
@@ -40,6 +45,10 @@ const BottomTabs = () => (
       name="OtherSciences"
       component={OtherSciences}
       options={{
+        tabBarLabelStyle: {
+          color: '#535353',
+          fontFamily: 'NotoKufiArabic-Regular',
+        },
         headerShown: false,
         tabBarActiveTintColor: '#535353',
         tabBarLabel: 'العلوم الاخري',
@@ -55,6 +64,10 @@ const BottomTabs = () => (
       name="Bokhary"
       component={Bokhary}
       options={{
+        tabBarLabelStyle: {
+          color: '#535353',
+          fontFamily: 'NotoKufiArabic-Regular',
+        },
         headerShown: false,
         tabBarActiveTintColor: '#535353',
         tabBarLabel: ' البخاري',
@@ -70,12 +83,16 @@ const BottomTabs = () => (
       name="Quran"
       component={Quran}
       options={{
+        tabBarLabelStyle: {
+          color: '#535353',
+          fontFamily: 'NotoKufiArabic-Regular',
+        },
         headerShown: false,
         tabBarActiveTintColor: '#535353',
         tabBarLabel: 'القرآن الكريم',
         tabBarIcon: ({color}) => (
           <Image
-            source={require('../../assets/quran.png')}
+            source={require('../../assets/quran2-icon.png')}
             style={{width: 24, height: 19}}
           />
         ),
@@ -85,6 +102,10 @@ const BottomTabs = () => (
       name="Home"
       component={HomeScreen}
       options={{
+        tabBarLabelStyle: {
+          color: '#535353',
+          fontFamily: 'NotoKufiArabic-Regular',
+        },
         headerShown: false,
         tabBarActiveTintColor: '#535353',
         tabBarLabel: 'الرئيسية',

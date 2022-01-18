@@ -12,7 +12,7 @@ function TodayCards(props) {
          justifyContent: 'center',
          alignItems: 'center',
        }}>
-       <Text style={{marginRight: 10}}>حديث اليوم</Text>
+       <Text style={{color:"#fff"}}>حديث اليوم</Text>
      </ImageBackground>
      <ImageBackground
        source={require('../../assets/CardBg.png')}
@@ -22,7 +22,7 @@ function TodayCards(props) {
          justifyContent: 'center',
          alignItems: 'center',
        }}>
-       <Text style={{marginRight: 10}}>آية اليوم</Text>
+       <Text style={{color:"#fff"}}>آية اليوم</Text>
      </ImageBackground>
    </View>
  );

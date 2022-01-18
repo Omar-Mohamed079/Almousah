@@ -11,9 +11,10 @@ function SearchBar(props) {
        />
        <TextInput
          style={{
-           color: '#B4B4B4',
+           color: '#ffffff',
            fontSize: 10,
            width: '50%',
+           textAlign:"right",
            fontFamily: 'NotoKufiArabic-Regular',
            alignSelf: 'center',
          }}
